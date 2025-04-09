@@ -1,100 +1,124 @@
-<style>
- .content {
-  font-family: 'Times New Roman', serif;
-  max-width: 900px;
-  margin: auto;
-  padding: 10px;
-}
-ol li {
-    margin-bottom: 12px;
-}
-ul li {
-    margin-bottom: 5px;
-}
-a:link {color: darkblue;}
-a:visited {color: darkblue;}
-.tab { white-space: pre; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminars</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h4 {
+            font-size: 1.5rem;
+            color: #444;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #1e70a1;
+        }
+        .tab {
+            white-space: pre-wrap;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .btn-return {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .btn-return:hover {
+            background-color: #1e70a1;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h4>In-person seminars</h4>
+        <ul>
+            <li><a href="https://xiaoweijiang-math.github.io/Reading seminar on moduli space of boundary polarised CY pairs.pdf" target="_blank">
+                Reading seminar on moduli space of boundary polarised CY pairs</a>, Fall 2023, Peking University.</li>
+            <li><a href="https://www.bimsa.cn/newsinfo/869354.html" target="_blank">BIMSA-YMSC AG Seminar</a>, Fall 2023, Tsinghua University.</li>
+            <li><a href="https://ymsc-moduli.github.io/activities-seminars.html" target="_blank">
+                Moduli Spaces and Related Topics</a>, Spring 2023 ~, Tsinghua University.</li>
+            <li><a href="https://xiaoweijiang-math.github.io/Seminar%20on%20K-stability_2023%20spring%20.pdf" target="_blank">
+                Seminar on K-stability</a>, Spring 2023, Peking University.</li>
+            <li><a href="https://xiaoweijiang-math.github.io/THU-BGLS" target="_blank">
+                Tsinghua Birational Geometry Learning Seminar</a>, Fall 2021 ~ Spring 2023, Tsinghua University.</li>
+            <li><a href="https://ymsc.tsinghua.edu.cn/info/1053/3108.htm" target="_blank">
+                Reading Seminar on Local Positivity</a>, Fall 2022, Tsinghua University.</li>
+            <li><a href="https://xunlin0.github.io/" target="_blank">Tsinghua Preprint Seminar</a>, Fall 2022, Tsinghua University.</li>
+        </ul>
 
-body,table{font-size:13pt;}
+        <h4>Online reading seminars</h4>
+        <ul>
+            <li><a href="https://sites.google.com/uic.edu/k-moduli?usp=sharing" target="_blank">
+                Reading Seminar on K-moduli</a>, Fall 2023, University of Illinois at Chicago.</li>
+            <li><a href="https://docs.google.com/document/d/1pz_W71sqJn1fLFrLj29TP3O8LlsPqkI4H2_3NmfyZEQ/edit" target="_blank">
+                2023 Moduli and Stacks Learning Seminar</a>, Spring 2023, Princeton.</li>
+            <li><a href="https://chenjiangfudan.github.io/home/conferences/reading2021.html" target="_blank">
+                Boundedness Reading Seminar</a>, Fall 2021 ~ Fall 2022, Fudan-Westlake-Xiamen.</li>
+            <li><a href="https://yau-msc-events.github.io/seminar-gv.html" target="_blank">
+                Generic Vanishing Learning Seminar</a>, Spring 2022, Tsinghua University.</li>
+            <li><a href="https://www.math.ucla.edu/~jmoraga/Learning-Seminar-MMP" target="_blank">
+                Minimal Model Program Learning Seminar</a>, Spring 2021 ~ Fall 2022, Princeton-UCLA.</li>
+        </ul>
 
-a:link{color:#0000ff;text-decoration:none;}
+        <h4>Online research seminars</h4>
+        <ul>
+            <li><a href="https://www.math.ucla.edu/~jmoraga/BGS2023" target="_blank">
+                Birational Geometry Seminar 2023</a>, Spring 2023 ~, UCLA.</li>
+            <li><a href="https://ymsc.tsinghua.edu.cn/info/1053/1730.htm" target="_blank">
+                Algebraic Geometry Seminar</a>, Fall 2021 ~, Tsinghua University.</li>
+            <li><a href="https://sites.google.com/view/laboratoryofbirationalgeometry/%E9%A6%96%E9%A0%81" target="_blank">
+                Birational Geometry Seminar</a>, Fall 2021 ~, NCTS.</li>
+            <li><a href="http://magma.maths.usyd.edu.au/%7Ekasprzyk/seminars/ag.html" target="_blank">
+                Online Algebraic Geometry Seminar</a>, Spring 2020 ~, Nottingham University.</li>
+            <li><a href="https://chenjiangfudan.github.io/home/conferences/XBGS.html" target="_blank">
+                Explicit Birational Geometry Seminar</a>, Fall 2021 ~ Fall 2022, Fudan University.</li>
+            <li><a href="https://sites.google.com/ncts.ntu.edu.tw/agea-seminar" target="_blank">
+                Algebraic Geometry in East Asia</a>, Fall 2020 ~ Fall 2022, NCTS.</li>
+            <li><a href="https://www.maths.ed.ac.uk/cheltsov/zag/" target="_blank">
+                Zoom Algebraic Geometry Seminar</a>, Spring 2020 ~ Spring 2022, NCTS.</li>
+        </ul>
 
-a:active{color:#0000ff;text-decoration:none;}
-
-a:visited{color:#0000ff;text-decoration:none;}
-
-a:hover{color:#0000ff;text-decoration:underline;}
-
-</style>
-
-<title>Seminars</title>
-<div class="content">
-
-
-<h4> In person seminars</h4>
-
-<Li><a href="https://xiaoweijiang-math.github.io/Reading seminar on moduli space of boundary polarised CY pairs.pdf"target="_blank">
- Reading seminar on moduli space of boundary polarised CY pairs</a>, Fall 2023, Peking University.</Li>
-
-<Li><a href="https://www.bimsa.cn/newsinfo/869354.html"target="_blank">
-BIMSA-YMSC AG Seminar</a>, Fall 2023, Tsinghua University.</Li>
-
-<!--<Li><a href="https://ymsc.tsinghua.edu.cn/info/1053/3227.htm"target="_blank">
-Seminar of Advance Topics in Algebra and Geometry</a>, Spring 2023, Tsinghua University.</Li>-->
-
-<Li><a href="https://ymsc-moduli.github.io/activities-seminars.html"target="_blank">
-Moduli Spaces and Related Topics</a>, Spring 2023 ~, Tsinghua University.</Li>
-
-<Li><a href="https://xiaoweijiang-math.github.io/Seminar%20on%20K-stabilty_2023%20spring%20.pdf"target="_blank">
- Seminar on K-stability</a>, Spring 2023, Peking University.</Li>
-
- <li><a href="https://xiaoweijiang-math.github.io/THU-BGLS"> Tsinghua Birational Geometry Learning Seminar</a>, 
-  Fall 2021 ~ Spring 2023, Tsinghua University.</li>
-
-<Li><a href="https://ymsc.tsinghua.edu.cn/info/1053/3108.htm"target="_blank">
- Reading Seminar on Local Positivity</a>, Fall 2022, Tsinghua University.</Li>
-
-<Li><a href="https://xunlin0.github.io/"target="_blank">
- Tsinghua Preprint Seminar</a>, Fall 2022, Tsinghua University.</Li>
-
- <h4> Online reading seminars</h4>
-    <Li><a href="https://sites.google.com/uic.edu/k-moduli?usp=sharing"target="_blank">
-   Reading Seminar on K-moduli</a>, Fall 2023,University of Illinois at Chicago.</Li>
-
-  <Li><a href="https://docs.google.com/document/d/1pz_W71sqJn1fLFrLj29TP3O8LlsPqkI4H2_3NmfyZEQ/edit"target="_blank">
-   2023 Moduli and Stacks Learning Seminar</a>, Spring 2023, Princeton.</Li>
-
- <Li><a href="https://chenjiangfudan.github.io/home/conferences/reading2021.html"target="_blank">
-  Boundedness Reading Seminar</a>, Fall 2021 ~ Fall 2022, Fudan-Westlake-Xiamen.</Li>
-
- <Li><a href="https://yau-msc-events.github.io/seminar-gv.html"target="_blank">
-  Generic Vanishing Learning Seminar</a>, Spring 2022, Tsinghua University.</Li>
-
-<Li><a href="https://www.math.ucla.edu/~jmoraga/Learning-Seminar-MMP"target="_blank">
- Minimal Model Program Learning Seminar</a>, 
- Spring 2021 ~ Fall 2022, Princeton-UCLA.</Li>
-  
- <h4> Online research seminars</h4>
-<Li><a href="https://www.math.ucla.edu/~jmoraga/BGS2023"target="_blank">
- Birational Geometry Seminar 2023</a>, Spring 2023 ~, UCLA.</Li>
- <Li><a href="https://ymsc.tsinghua.edu.cn/info/1053/1730.htm"target="_blank">
-  Algebraic Geometry Seminar</a>, Fall 2021 ~, Tsinghua University</Li> 
-
-    <Li><a href="https://sites.google.com/view/laboratoryofbirationalgeometry/%E9%A6%96%E9%A0%81"target="_blank">
-     Birational Geometry Seminar</a>, Fall 2021 ~, NCTS.</Li> 
-  
-   <Li><a href="http://magma.maths.usyd.edu.au/%7Ekasprzyk/seminars/ag.html"target="_blank">
-    Online Algebraic Geometry Seminar</a>, Spring 2020 ~, Nottingham University.</Li> 
-
-<Li><a href="https://chenjiangfudan.github.io/home/conferences/XBGS.html"target="_blank">
- Explicit Birational Geometry Seminar</a>, Fall 2021 ~ Fall 2022, Fudan University.</Li>
-   
-<Li><a href="https://sites.google.com/ncts.ntu.edu.tw/agea-seminar"target="_blank">
- Algebraic Geometry in East Asia</a>, Fall 2020 ~ Fall 2022, NCTS.</Li> 
-
-<Li><a href="https://www.maths.ed.ac.uk/cheltsov/zag/"target="_blank">
- Zoom Algebraic Geometry Seminar</a>, Spring 2020 ~ Spring 2022, NCTS.</Li> 
-
-   <hr>
-<p><strong><a href="https://xiaoweijiang-math.github.io/">Return to Home</a></strong></p>
-</div>
+        <hr>
+        <a class="btn-return" href="https://xiaoweijiang-math.github.io/useful%20link">Return to Home</a>
+    </div>
+</body>
+</html>
