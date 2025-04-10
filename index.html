@@ -44,6 +44,33 @@
   .tab { 
     white-space: pre;
   }
+.toggle-travel {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4a90e2; /* Travel 按钮颜色 */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggle-travel::before {
+  content: "▶"; /* 右向三角形 */
+  font-size: 16px;
+  transition: transform 0.2s ease-in-out;
+}
+
+details[open] .toggle-travel::before {
+  content: "▼"; /* 下向三角形 */
+}
+
+/* 确保 details 里面的内容颜色和字体不变 */
+details ul {
+  color: black; /* 具体内容保持默认颜色 */
+  font-size: 16px; /* 具体内容字体大小 */
+  font-weight: normal; /* 具体内容不加粗 */
+}
+
 </style>
 </head>
 <body>
