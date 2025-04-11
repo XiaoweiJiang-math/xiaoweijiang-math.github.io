@@ -58,15 +58,24 @@ body {
   gap: 8px;
 }
 
+details summary {
+  list-style: none; /* 移除默认的箭头 */
+}
+
+details summary::-webkit-details-marker {
+  display: none; /* Safari 专属，隐藏默认箭头 */
+}
+
 .toggle-travel::before {
-  content: "▶"; /* 右向三角形 */
+  content: "▶"; /* 默认右向三角形 */
   font-size: 16px;
   transition: transform 0.2s ease-in-out;
 }
 
 details[open] .toggle-travel::before {
-  content: "▼"; /* 下向三角形 */
+  content: "▼"; /* 展开时变成下向三角形 */
 }
+
 
 /* 确保 details 里面的内容颜色和字体不变 */
 details ul {
