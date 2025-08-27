@@ -97,6 +97,18 @@
             font-size: 1em;
             color: #777;
         }
+        /* ============ 折叠样式美化 ============ */
+        details summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #0056b3;
+        }
+        details summary:hover {
+            text-decoration: underline;
+        }
+        details {
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -121,9 +133,7 @@
             <tr>
                 <th>Date</th>
                 <th>Speaker</th>
-                <th>Topic</th>
-                
-                <th>Description</th>
+                <th>Topic & Abstract</th>
 				<th>References</th>
             </tr>
         </thead>
@@ -132,8 +142,12 @@
             <tr>
                 <td>Sep 15, 2025</td>
                 <td>Xiaowei Jiang</td>
-                <td>Overview</td>
-                <td>Presentation and assignment of the topics.</td>
+                <td>
+                  <details>
+                    <summary>Overview — click for abstract</summary>
+                    Presentation and assignment of the topics.
+                  </details>
+                </td>
                 <td>&nbsp;</td>
             </tr>
 
@@ -141,73 +155,108 @@
             <tr>
                 <td>Sep 22, 2025</td>
                 <td>Speaker Name</td>
-                <td>Topic Title</td>
-
-                <td>Short description of the main content of this talk.</td>
-				                <td>[ABC22]</td>
+                <td>
+                  <details>
+                    <summary>Topic Title — click for abstract</summary>
+                    Short description of the main content of this talk.
+                  </details>
+                </td>
+				<td>[ABC22]</td>
             </tr>
 <!-- ======================================================================================= -->
             <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td>
+                  <details>
+                    <summary>&nbsp;</summary>
+                    &nbsp;
+                  </details>
+                </td>
                 <td>&nbsp;</td>
             </tr>
 <!-- ==================================================================================================== -->
             <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td>
+                  <details>
+                    <summary>&nbsp;</summary>
+                    &nbsp;
+                  </details>
+                </td>
                 <td>&nbsp;</td>
             </tr>
 <!-- 			=========================================================================================== -->
             <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td>
+                  <details>
+                    <summary>&nbsp;</summary>
+                    &nbsp;
+                  </details>
+                </td>
                 <td>&nbsp;</td>
             </tr>
 <!-- 			======================================================================================================== -->
             <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td>
+                  <details>
+                    <summary>&nbsp;</summary>
+                    &nbsp;
+                  </details>
+                </td>
                 <td>&nbsp;</td>
             </tr>
 <!-- 			=============================================================================================================== -->
             <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-<!-- 			=============================================================================================== -->
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td>
+                  <details>
+                    <summary>&nbsp;</summary>
+                    &nbsp;
+                  </details>
+                </td>
                 <td>&nbsp;</td>
             </tr>
 <!-- 			=============================================================================================== -->
             <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
+                <td>
+                  <details>
+                    <summary>&nbsp;</summary>
+                    &nbsp;
+                  </details>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+<!-- 			=============================================================================================== -->
+            <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
+                <td>
+                  <details>
+                    <summary>&nbsp;</summary>
+                    &nbsp;
+                  </details>
+                </td>
                 <td>&nbsp;</td>
             </tr>
 <!-- 			========================================================================================================= -->
             <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td>
+                  <details>
+                    <summary>&nbsp;</summary>
+                    &nbsp;
+                  </details>
+                </td>
                 <td>&nbsp;</td>
             </tr>
 			
