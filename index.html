@@ -23,45 +23,46 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 /* 	===================================照片============================================== */
-
 .header {
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
-    flex-wrap: wrap; /* 小屏幕换行 */
+  display: flex;
+  align-items: flex-start; /* 顶部对齐左列 */
+  gap: 30px;
 }
 
 .info {
-    flex: 2 1 300px; /* 可伸缩，最小宽度300px */
+  flex: 2;
 }
 
+/* 照片与第一行文字对齐 */
 .photo {
-    flex: 1 1 200px; /* 可缩小，最小宽度200px */
-    margin-top: 50px; /* 对齐电脑端第一行文字 */
+  margin-top: 50px; /* 调整数值微调对齐 */
 }
 
 .photo img {
-    width: 100%;       /* 自适应容器宽度 */
-    max-width: 220px;  /* 最大宽度220px */
-    height: auto;      /* 自动高度保持比例 */
-    object-fit: cover;
-    border-radius: 0;
-    border: 3px solid #bbdefb;
-    box-shadow: none;
+  width: 220px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0;
+  border: 3px solid #bbdefb; /* 浅蓝色边框与背景协调 */
+  box-shadow: none;
 }
-
-/* ===== 响应式调整：手机端 ===== */
+/* 手机端优化 */
 @media (max-width: 600px) {
-    .header {
-        flex-direction: column; /* 手机端上下排列 */
-        align-items: center;
-    }
-    .photo {
-        margin-top: 20px;      /* 缩小间距 */
-    }
-    .info {
-        text-align: center;
-    }
+  .header {
+    flex-direction: column; /* 上下排列 */
+    align-items: center;    /* 居中 */
+  }
+  .photo {
+    margin-top: 20px;       /* 缩小间距 */
+    width: 80%;             /* 图片宽度自适应屏幕 */
+  }
+  .photo img {
+    width: 100%;            /* 占满容器宽度 */
+    height: auto;           /* 保持比例 */
+  }
+  .info {
+    text-align: center;     /* 文字居中 */
+  }
 }
 /* 	============================================================================================= */
   h2, h3 {
