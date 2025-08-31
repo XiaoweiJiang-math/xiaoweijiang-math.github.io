@@ -23,22 +23,29 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .header {
-  display: flex;             /* 水平排列 */
-  align-items: flex-start;   /* 顶部对齐 */
-  gap: 30px;                 /* 左右间距 */
+  display: flex;             
+  align-items: flex-start;   /* 顶部对齐整个左列 */
+  gap: 30px;                 
 }
 
 .info {
-  flex: 2;                   /* 左边列更宽 */
+  flex: 2;                   
+}
+
+/* 让图片顶部与 I am a Ph.D. 行对齐 */
+.photo {
+  margin-top: 45px; /* 调整这个值直到对齐 */
 }
 
 .photo img {
-  width: 220px;              /* 固定宽度 */
-  height: 300px;             /* 固定高度 */
-  object-fit: cover;         /* 保持比例裁剪 */
-  border-radius: 0;          /* 没有圆角 */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 阴影，可选 */
+  width: 220px;              
+  height: 300px;             
+  object-fit: cover;         
+  border-radius: 0;          
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
 }
+
+	
   h2, h3 {
     color: #4a90e2; /* 设置标题颜色为蓝色 */
   }
