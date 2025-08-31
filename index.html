@@ -22,15 +22,14 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .profile-photo {
-  width: 160px;       /* 控制宽度（竖版效果，长方形） */
-  height: 220px;      /* 高度比宽度大 */
-  object-fit: cover;  /* 保证不变形，超出部分裁剪 */
-  float: right;       /* 靠右对齐 */
-  margin: 0 0 15px 15px; /* 与文字保持间距 */
-  border-radius: 8px; /* 轻微圆角，可去掉 */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 阴影 */
+  width: 220px;       /* 控制宽度 */
+  height: 300px;      /* 控制高度，长方形 */
+  object-fit: cover;  /* 保持比例，裁剪多余部分 */
+  float: right;       /* 靠右浮动 */
+  margin: 0 0 15px 20px; /* 与文字保持距离 */
+  border-radius: 0;   /* 不要圆角 */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 可选，增加阴影 */
 }
 
   h2, h3 {
@@ -100,24 +99,25 @@ details ul {
 <div class="content">
 <!-- 	==================================正文============================================================ -->
 
-	<h2>
+<h2>
   Xiaowei Jiang (江孝炜)
 </h2>
+
 <img src="images/me.jpg" alt="Xiaowei Jiang" class="profile-photo">
-<p>I am a Ph.D. student at <a href="https://ymsc.tsinghua.edu.cn/" target="_blank">YMSC</a>, under the supervision of Professor 
+
+<p>I am a Ph.D. student at <a href="https://ymsc.tsinghua.edu.cn/" target="_blank">YMSC</a>, 
+	under the supervision of Professor 
 	<a href="https://ymsc.tsinghua.edu.cn/en/info/1031/1892.htm" target="_blank">Caucher Birkar</a>.
 	This is my <a href="https://xiaoweijiang-math.github.io/cv/CV.pdf" target="_blank">CV</a>.</p>
+
 <p><b>Office</b>: Shuangqing Complex Building, C740, Tsinghua University.</p>
 <p><b>Emails</b>: jxw20[at]mails[dot]tsinghua[dot]edu[dot]cn, xiaoweijiang[at]pku[dot]edu[dot]cn</p>
 
 <p><b>Research interest</b>: Birational Geometry</p>
 <ul>
   <li>Minimal Model Program and Abundance</li>
-  <li>Boundedness and Moduli of Algebriac Varieties</li>
+  <li>Boundedness and Moduli of Algebraic Varieties</li>
 </ul>
-
-
-
 <!-- =====================================================================================这是本学期讨论班信息============================ -->
 <!-- <h3> 
 	 <details>
