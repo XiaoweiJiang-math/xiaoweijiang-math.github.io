@@ -24,26 +24,42 @@ body {
 }
 .header {
   display: flex;
-  align-items: flex-start; /* 顶部对齐左列 */
+  align-items: flex-start;
   gap: 30px;
+  flex-wrap: wrap; /* 小屏幕自动换行 */
 }
 
 .info {
-  flex: 2;
+  flex: 2 1 300px; /* 最小宽度300px，超过可扩展 */
 }
 
-/* 照片与第一行文字对齐 */
 .photo {
-  margin-top: 50px; /* 调整数值微调对齐 */
+  margin-top: 50px;
+  flex: 1 1 200px; /* 最小宽度200px，可缩小 */
 }
 
 .photo img {
-  width: 220px;
-  height: 300px;
+  width: 100%;      /* 宽度自适应容器 */
+  max-width: 220px; /* 最大宽度220px */
+  height: auto;     /* 高度自动，保持比例 */
   object-fit: cover;
   border-radius: 0;
-  border: 3px solid #bbdefb; /* 浅蓝色边框与背景协调 */
+  border: 3px solid #bbdefb;
   box-shadow: none;
+}
+
+/* 手机屏幕优化 */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column; /* 手机端上下排列 */
+    align-items: center;
+  }
+  .photo {
+    margin-top: 20px;
+  }
+  .info {
+    text-align: center;
+  }
 }
 	
   h2, h3 {
