@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Algebraic and Birational Geometry Seminar</title>
+
+<style>
+  :root {
+    --text: #222;
+    --muted: #666;
+    --light: #888;
+    --line: #e6e6e6;
+    --accent: #1f4f7a;
+    --accent-light: #eef4f9;
+    --bg: #fff;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family:
+      -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+  }
+
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  header {
+    padding: 62px 0 38px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .institution {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.25rem;
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .description {
+    max-width: 760px;
+    color: var(--muted);
+    margin: 18px 0 0;
+    font-size: 1rem;
+  }
+
+  nav {
+    margin-top: 24px;
+    font-size: 0.92rem;
+  }
+
+  nav a {
+    color: var(--accent);
+    text-decoration: none;
+    margin-right: 22px;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  section {
+    padding: 42px 0;
+  }
+
+  section + section {
+    border-top: 1px solid var(--line);
+  }
+
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.55rem;
+    font-weight: 500;
+    margin: 0 0 24px;
+  }
+
+  .facts {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    row-gap: 13px;
+    max-width: 800px;
+    margin-top: 26px;
+  }
+
+  .facts dt {
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  .facts dd {
+    margin: 0;
+  }
+
+  .contact {
+    margin-top: 24px;
+  }
+
+  a {
+    color: var(--accent);
+  }
+
+  .talk-card {
+    padding: 0 0 34px;
+    margin-bottom: 34px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .talk-card:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .talk-date {
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 0 5px;
+  }
+
+  .talk-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    line-height: 1.3;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .affiliation {
+    color: var(--muted);
+    margin: 3px 0 13px;
+    font-size: 0.94rem;
+  }
+
+  .talk-title {
+    font-size: 1.08rem;
+    font-weight: 600;
+    margin: 0 0 12px;
+  }
+
+  .talk-meta {
+    margin: 12px 0 15px;
+    padding: 10px 14px;
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    max-width: 800px;
+    font-size: 0.92rem;
+  }
+
+  .special-meta + .special-meta {
+    margin-top: 4px;
+  }
+
+  .abstract {
+    max-width: 800px;
+    color: #333;
+    line-height: 1.7;
+    margin-top: 13px;
+    white-space: pre-line;
+  }
+
+  .abstract-label {
+    font-weight: 600;
+    margin-right: 4px;
+  }
+
+  .empty {
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 28px 0 42px;
+    color: var(--light);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 650px) {
+    .container {
+      padding: 0 20px;
+    }
+
+    header {
+      padding-top: 42px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    .facts {
+      grid-template-columns: 1fr;
+      row-gap: 3px;
+    }
+
+    .facts dt {
+      margin-top: 10px;
+    }
+
+    section {
+      padding: 32px 0;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+
+    <div class="institution">
+      Shanghai Center for Mathematical Sciences, Fudan University
+    </div>
+
+    <h1>Algebraic and Birational Geometry Seminar</h1>
+
+    <p class="description">
+      The Birational Geometry Seminar brings together researchers and students
+      working in algebraic geometry, birational geometry, and related areas.
+    </p>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#upcoming">Upcoming Talks</a>
+      <a href="#past">Past Talks</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main class="container">
+
+<section id="about">
+
+  <h2>About</h2>
+
+  <dl class="facts">
+
+    <dt>Time</dt>
+    <dd>9:30–11:00, Friday</dd>
+
+    <dt>Location</dt>
+    <dd>TBD</dd>
+
+    <dt>Organizers</dt>
+    <dd>
+      Jingjun Han, Chen Jiang, Xiaowei Jiang, Qingyuan Xue
+    </dd>
+
+  </dl>
+
+  <p class="contact">
+    Contact:
+    <a href="mailto:xw_jiang@fudan.edu.cn">
+      xw_jiang@fudan.edu.cn
+    </a>
+  </p>
+
+</section>
+
+
+<section id="upcoming">
+
+  <h2>Upcoming Talks</h2>
+
+  <div id="upcoming-talks"></div>
+
+</section>
+
+
+<section id="past">
+
+  <h2>Past Talks</h2>
+
+  <div id="past-talks"></div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <div class="container">
+    Algebraic and Birational Geometry Seminar · Fudan University
+  </div>
+
+</footer>
+
+
+<script>
+
+/*
+===========================================================
+  ONLY EDIT THIS PART
+===========================================================
+
+  Add a new talk by copying one of the blocks below.
+
+  date:
+      YYYY-MM-DD
+
+  affiliation:
+      Put "" if there is no affiliation.
+
+  title:
+      Put "TBA" if the title is not available.
+
+  abstract:
+      Put "" if the abstract is not available.
+
+  specialTime:
+      Put "" for the normal seminar time.
+      For example: "11:00"
+
+  specialLocation:
+      Put "" for the normal location.
+      For example: "Room 501"
+
+===========================================================
+*/
+
+
+const talks = [
+
+  {
+    date: "2026-09-04",
+
+    speaker: "Minzhe Zhu",
+
+    affiliation: "Korea Institute for Advanced Study (KIAS)",
+
+    title: "Boundedness of polarized foliated surfaces",
+
+    abstract: `We establish the minimal model program for klt adjoint foliated surfaces and use it to study the boundedness of polarized adjoint foliated surfaces. We prove that ε-lc adjoint foliated surfaces with nef adjoint canonical divisor and a nef and big integral polarization form a bounded family, provided that the volume of their sum is bounded from above.
+
+As applications, we establish boundedness and effective birationality for adjoint foliated surfaces of general type, as well as a uniform positive lower bound for their volumes.
+
+Finally, for ε-lc Calabi–Yau adjoint foliated surfaces, we prove that the volumes of the canonical divisors of rank one foliations on the underlying surfaces belong to a fixed discrete set.`,
+
+    specialTime: "11:00",
+
+    specialLocation: ""
+  },
+
+
+  {
+    date: "2026-09-11",
+
+    speaker: "Kewei Zhang",
+
+    affiliation: "",
+
+    title: "TBA",
+
+    abstract: "",
+
+    specialTime: "",
+
+    specialLocation: ""
+  },
+
+
+  /*
+  {
+    date: "2026-09-18",
+
+    speaker: "Speaker Name",
+
+    affiliation: "University / Institution",
+
+    title: "Talk Title",
+
+    abstract: `Abstract goes here.`,
+
+    specialTime: "",
+
+    specialLocation: ""
+  },
+  */
+
+];
+
+
+/*
+===========================================================
+  DO NOT EDIT BELOW THIS LINE
+===========================================================
+*/
+
+
+function parseLocalDate(dateString) {
+
+  const [year, month, day] =
+    dateString.split("-").map(Number);
+
+  return new Date(year, month - 1, day);
+}
+
+
+function formatDate(dateString) {
+
+  return parseLocalDate(dateString).toLocaleDateString(
+    "en-US",
+    {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    }
+  );
+
+}
+
+
+function createTalkCard(talk) {
+
+  const article =
+    document.createElement("article");
+
+  article.className = "talk-card";
+
+
+  const date =
+    document.createElement("p");
+
+  date.className = "talk-date";
+
+  date.textContent =
+    formatDate(talk.date);
+
+  article.appendChild(date);
+
+
+  const speaker =
+    document.createElement("h3");
+
+  speaker.textContent =
+    talk.speaker;
+
+  article.appendChild(speaker);
+
+
+  if (talk.affiliation) {
+
+    const affiliation =
+      document.createElement("p");
+
+    affiliation.className =
+      "affiliation";
+
+    affiliation.textContent =
+      talk.affiliation;
+
+    article.appendChild(affiliation);
+
+  }
+
+
+  const title =
+    document.createElement("p");
+
+  title.className =
+    "talk-title";
+
+
+  if (
+    talk.title &&
+    talk.title !== "TBA"
+  ) {
+
+    title.textContent =
+      talk.title;
+
+  } else {
+
+    const em =
+      document.createElement("em");
+
+    em.textContent =
+      "Title to be announced";
+
+    title.appendChild(em);
+
+  }
+
+  article.appendChild(title);
+
+
+  const specialTime =
+    talk.specialTime &&
+    talk.specialTime.trim() !== "";
+
+
+  const specialLocation =
+    talk.specialLocation &&
+    talk.specialLocation.trim() !== "";
+
+
+  if (
+    specialTime ||
+    specialLocation
+  ) {
+
+    const meta =
+      document.createElement("div");
+
+    meta.className =
+      "talk-meta";
+
+
+    if (specialTime) {
+
+      const p =
+        document.createElement("div");
+
+      p.className =
+        "special-meta";
+
+      p.textContent =
+        "Special time: " +
+        talk.specialTime;
+
+      meta.appendChild(p);
+
+    }
+
+
+    if (specialLocation) {
+
+      const p =
+        document.createElement("div");
+
+      p.className =
+        "special-meta";
+
+      p.textContent =
+        "Special location: " +
+        talk.specialLocation;
+
+      meta.appendChild(p);
+
+    }
+
+
+    article.appendChild(meta);
+
+  }
+
+
+  if (
+    talk.abstract &&
+    talk.abstract.trim() !== ""
+  ) {
+
+    const abstract =
+      document.createElement("div");
+
+    abstract.className =
+      "abstract";
+
+
+    const label =
+      document.createElement("span");
+
+    label.className =
+      "abstract-label";
+
+    label.textContent =
+      "Abstract.";
+
+    abstract.appendChild(label);
+
+
+    const text =
+      document.createElement("span");
+
+    text.textContent =
+      " " + talk.abstract;
+
+    abstract.appendChild(text);
+
+
+    article.appendChild(abstract);
+
+  }
+
+
+  return article;
+
+}
+
+
+function renderTalks() {
+
+  const today =
+    new Date();
+
+  today.setHours(
+    0, 0, 0, 0
+  );
+
+
+  const upcoming =
+    talks
+      .filter(
+        talk =>
+          parseLocalDate(talk.date) >= today
+      )
+      .sort(
+        (a, b) =>
+          parseLocalDate(a.date) -
+          parseLocalDate(b.date)
+      );
+
+
+  const past =
+    talks
+      .filter(
+        talk =>
+          parseLocalDate(talk.date) < today
+      )
+      .sort(
+        (a, b) =>
+          parseLocalDate(b.date) -
+          parseLocalDate(a.date)
+      );
+
+
+  const upcomingContainer =
+    document.getElementById(
+      "upcoming-talks"
+    );
+
+
+  const pastContainer =
+    document.getElementById(
+      "past-talks"
+    );
+
+
+  if (upcoming.length === 0) {
+
+    upcomingContainer.innerHTML =
+      '<p class="empty">No upcoming talks have been announced.</p>';
+
+  } else {
+
+    upcoming.forEach(
+      talk =>
+        upcomingContainer.appendChild(
+          createTalkCard(talk)
+        )
+    );
+
+  }
+
+
+  if (past.length === 0) {
+
+    pastContainer.innerHTML =
+      '<p class="empty">No past talks.</p>';
+
+  } else {
+
+    past.forEach(
+      talk =>
+        pastContainer.appendChild(
+          createTalkCard(talk)
+        )
+    );
+
+  }
+
+}
+
+
+renderTalks();
+
+</script>
+
+</body>
+</html>
