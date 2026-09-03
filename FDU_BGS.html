@@ -1,7 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <script>
+
+<script>
 window.MathJax = {
   tex: {
     inlineMath: [['\\(', '\\)'], ['$', '$']],
@@ -14,12 +17,14 @@ window.MathJax = {
   async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Birational Geometry Seminar</title>
 
 <style>
+
 :root {
   --text: #222;
   --muted: #667085;
@@ -65,10 +70,6 @@ body {
   line-height: 1.65;
 }
 
-/* =========================
-   Container
-   ========================= */
-
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -76,9 +77,7 @@ body {
 }
 
 
-/* =========================
-   Header
-   ========================= */
+/* Header */
 
 header {
   padding: 58px 0 42px;
@@ -153,9 +152,7 @@ nav a:hover {
 }
 
 
-/* =========================
-   Sections
-   ========================= */
+/* Sections */
 
 section {
   padding: 44px 0;
@@ -182,9 +179,7 @@ h2 {
 }
 
 
-/* =========================
-   About
-   ========================= */
+/* About */
 
 #about {
   padding-top: 40px;
@@ -223,6 +218,11 @@ h2 {
   color: #344054;
 }
 
+.about-note {
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
 .contact {
   margin-top: 22px;
 
@@ -234,9 +234,7 @@ a {
 }
 
 
-/* =========================
-   Talk Cards
-   ========================= */
+/* Talk Cards */
 
 .talk-card {
   position: relative;
@@ -325,9 +323,7 @@ a {
 }
 
 
-/* =========================
-   Special Time / Location
-   ========================= */
+/* Special Time / Location */
 
 .talk-meta {
   margin: 14px 0 18px;
@@ -354,9 +350,7 @@ a {
 }
 
 
-/* =========================
-   Abstract
-   ========================= */
+/* Abstract */
 
 .abstract {
   max-width: 850px;
@@ -381,9 +375,7 @@ a {
 }
 
 
-/* =========================
-   Empty message
-   ========================= */
+/* Empty message */
 
 .empty {
   color: var(--muted);
@@ -394,9 +386,7 @@ a {
 }
 
 
-/* =========================
-   Footer
-   ========================= */
+/* Footer */
 
 footer {
   margin-top: 20px;
@@ -413,9 +403,7 @@ footer {
 }
 
 
-/* =========================
-   Mobile
-   ========================= */
+/* Mobile */
 
 @media (max-width: 650px) {
 
@@ -480,17 +468,16 @@ footer {
   .abstract {
     font-size: 0.94rem;
   }
+
 }
+
 </style>
+
 </head>
 
 
 <body>
 
-
-<!-- =========================
-     Header
-     ========================= -->
 
 <header>
 
@@ -523,29 +510,34 @@ footer {
 <main class="container">
 
 
-<!-- =========================
-     About
-     ========================= -->
-
 <section id="about">
 
   <h2>About</h2>
 
   <dl class="facts">
 
-   <dt>Time</dt>
-<dd>
-  9:30–11:00, Friday<br>
-  <span style="color: #667085;">
-    The first 30 minutes are a pre-talk intended to be accessible to students
-    and researchers outside the field.
-  </span>
-</dd>
+    <dt>Time</dt>
+
+    <dd>
+      9:30–11:00, Friday<br>
+
+      <span class="about-note">
+        The first 30 minutes are a pre-talk intended to be accessible
+        to students and researchers outside the field, followed by
+        one hour for experts.
+      </span>
+    </dd>
+
 
     <dt>Location</dt>
-    <dd>Room 102, SCMS</dd>
+
+    <dd>
+      Room 102, SCMS
+    </dd>
+
 
     <dt>Organizers</dt>
+
     <dd>
       Jingjun Han, Chen Jiang, Xiaowei Jiang, Qingyuan Xue
     </dd>
@@ -553,15 +545,16 @@ footer {
   </dl>
 
 
+  <p class="contact">
+    Contact:
+    <a href="mailto:xw_jiang@fudan.edu.cn">
+      Xiaowei Jiang
+    </a>
   </p>
 
 </section>
 
 
-
-<!-- =========================
-     Upcoming Talks
-     ========================= -->
 
 <section id="upcoming">
 
@@ -572,10 +565,6 @@ footer {
 </section>
 
 
-
-<!-- =========================
-     Past Talks
-     ========================= -->
 
 <section id="past">
 
@@ -590,14 +579,10 @@ footer {
 
 
 
-<!-- =========================
-     Footer
-     ========================= -->
-
 <footer>
 
   <div class="container">
-   Birational Geometry Seminar · Fudan University
+    Birational Geometry Seminar · Fudan University
   </div>
 
 </footer>
@@ -607,42 +592,9 @@ footer {
 <script>
 
 
-/*
-===========================================================
-  ONLY EDIT THIS PART
-===========================================================
-
-  To add a new talk, copy one of the blocks below.
-
-  date:
-      YYYY-MM-DD
-
-  speaker:
-      Speaker's full name.
-
-  affiliation:
-      Put "" if there is no affiliation.
-
-  title:
-      Put "TBA" if the title is not available.
-
-  abstract:
-      Put "" if the abstract is not available.
-
-  specialTime:
-      Put "" for the normal seminar time.
-      Example: "11:00"
-
-  specialLocation:
-      Put "" for the normal location.
-      Example: "Room 501"
-
-===========================================================
-*/
-
-
 const talks = [
-      {
+
+  {
     date: "2026-10-16",
 
     speaker: "Fei Hu",
@@ -657,7 +609,9 @@ const talks = [
 
     specialLocation: ""
   },
-    {
+
+
+  {
     date: "2026-10-21",
 
     speaker: "Sheng Rao",
@@ -673,6 +627,7 @@ const talks = [
     specialLocation: ""
   },
 
+
   {
     date: "2026-09-04",
 
@@ -684,7 +639,8 @@ const talks = [
     title:
       "Boundedness of polarized foliated surfaces",
 
-    abstract: "We establish the minimal model program for klt adjoint foliated surfaces and use it to study the boundedness of polarized adjoint foliated surfaces. We prove that $\\epsilon$-lc adjoint foliated surfaces with nef adjoint canonical divisor and a nef and big integral polarization form a bounded family, provided that the volume of their sum is bounded from above. As applications, we establish boundedness and effective birationality for adjoint foliated surfaces of general type, as well as a uniform positive lower bound for their volumes. Finally, for $\\epsilon$-lc Calabi--Yau adjoint foliated surfaces, we prove that the volumes of the canonical divisors of rank one foliations on the underlying surfaces belong to a fixed discrete set. This is joint work with Yen-An Chen.",
+    abstract:
+      "We establish the minimal model program for klt adjoint foliated surfaces and use it to study the boundedness of polarized adjoint foliated surfaces. We prove that $\\epsilon$-lc adjoint foliated surfaces with nef adjoint canonical divisor and a nef and big integral polarization form a bounded family, provided that the volume of their sum is bounded from above. As applications, we establish boundedness and effective birationality for adjoint foliated surfaces of general type, as well as a uniform positive lower bound for their volumes. Finally, for $\\epsilon$-lc Calabi--Yau adjoint foliated surfaces, we prove that the volumes of the canonical divisors of rank one foliations on the underlying surfaces belong to a fixed discrete set. This is joint work with Yen-An Chen.",
 
     specialTime: "",
 
@@ -728,12 +684,6 @@ const talks = [
 ];
 
 
-/*
-===========================================================
-  DO NOT EDIT BELOW THIS LINE
-===========================================================
-*/
-
 
 function parseLocalDate(dateString) {
 
@@ -745,7 +695,23 @@ function parseLocalDate(dateString) {
     month - 1,
     day
   );
+
 }
+
+
+
+function getDayName(dateString) {
+
+  return parseLocalDate(dateString)
+    .toLocaleDateString(
+      "en-US",
+      {
+        weekday: "long"
+      }
+    );
+
+}
+
 
 
 function formatDate(dateString) {
@@ -759,7 +725,17 @@ function formatDate(dateString) {
         day: "numeric"
       }
     );
+
 }
+
+
+
+function isFriday(dateString) {
+
+  return parseLocalDate(dateString).getDay() === 5;
+
+}
+
 
 
 function createTalkCard(talk) {
@@ -771,21 +747,34 @@ function createTalkCard(talk) {
     "talk-card";
 
 
-  /* Date */
-
   const date =
     document.createElement("p");
 
   date.className =
     "talk-date";
 
+
+  const friday =
+    isFriday(talk.date);
+
+
   date.textContent =
     formatDate(talk.date);
+
+
+  if (!friday) {
+
+    date.textContent +=
+      " · " +
+      getDayName(talk.date) +
+      " · Special time";
+
+  }
+
 
   article.appendChild(date);
 
 
-  /* Speaker */
 
   const speaker =
     document.createElement("h3");
@@ -796,7 +785,6 @@ function createTalkCard(talk) {
   article.appendChild(speaker);
 
 
-  /* Affiliation */
 
   if (
     talk.affiliation &&
@@ -813,10 +801,10 @@ function createTalkCard(talk) {
       talk.affiliation;
 
     article.appendChild(affiliation);
+
   }
 
 
-  /* Title */
 
   const title =
     document.createElement("p");
@@ -843,12 +831,12 @@ function createTalkCard(talk) {
       "Title to be announced";
 
     title.appendChild(em);
+
   }
 
   article.appendChild(title);
 
 
-  /* Special time / location */
 
   const specialTime =
     talk.specialTime &&
@@ -885,6 +873,7 @@ function createTalkCard(talk) {
         talk.specialTime;
 
       meta.appendChild(p);
+
     }
 
 
@@ -901,14 +890,15 @@ function createTalkCard(talk) {
         talk.specialLocation;
 
       meta.appendChild(p);
+
     }
 
 
     article.appendChild(meta);
+
   }
 
 
-  /* Abstract */
 
   if (
     talk.abstract &&
@@ -944,10 +934,12 @@ function createTalkCard(talk) {
 
 
     article.appendChild(abstract);
+
   }
 
 
   return article;
+
 }
 
 
@@ -965,11 +957,6 @@ function renderTalks() {
   );
 
 
-  /*
-     Upcoming:
-     today and future
-  */
-
   const upcoming =
     talks
       .filter(
@@ -982,11 +969,6 @@ function renderTalks() {
           parseLocalDate(b.date)
       );
 
-
-  /*
-     Past:
-     before today
-  */
 
   const past =
     talks
@@ -1013,10 +995,6 @@ function renderTalks() {
     );
 
 
-  /*
-     Render upcoming talks
-  */
-
   if (
     upcoming.length === 0
   ) {
@@ -1035,12 +1013,9 @@ function renderTalks() {
 
       }
     );
+
   }
 
-
-  /*
-     Render past talks
-  */
 
   if (
     past.length === 0
@@ -1060,6 +1035,7 @@ function renderTalks() {
 
       }
     );
+
   }
 
 }
@@ -1067,9 +1043,9 @@ function renderTalks() {
 
 renderTalks();
 
-
 </script>
 
 
 </body>
 </html>
+```
