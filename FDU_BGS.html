@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,6 +50,7 @@ window.MathJax = {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 60px;
 }
 
 body {
@@ -128,10 +128,30 @@ h1 {
   font-size: 1rem;
 }
 
-nav {
-  margin-top: 26px;
 
-  font-size: 0.92rem;
+/* Sticky Navigation */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border-bottom: 1px solid var(--line);
+
+  box-shadow:
+    0 2px 8px rgba(20, 45, 75, 0.04);
+
+  padding: 12px 0;
+
+  backdrop-filter: blur(8px);
+}
+
+nav .nav-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 32px;
 }
 
 nav a {
@@ -139,7 +159,9 @@ nav a {
 
   text-decoration: none;
 
-  margin-right: 24px;
+  margin-right: 26px;
+
+  font-size: 0.92rem;
 
   font-weight: 500;
 
@@ -148,6 +170,7 @@ nav a {
 
 nav a:hover {
   color: var(--accent-dark);
+
   text-decoration: underline;
 }
 
@@ -220,17 +243,8 @@ h2 {
 
 .about-note {
   color: var(--muted);
+
   font-size: 0.93rem;
-}
-
-.contact {
-  margin-top: 22px;
-
-  color: var(--muted);
-}
-
-a {
-  color: var(--accent);
 }
 
 
@@ -375,7 +389,7 @@ a {
 }
 
 
-/* Empty message */
+/* Empty Message */
 
 .empty {
   color: var(--muted);
@@ -423,12 +437,17 @@ footer {
     font-size: 0.95rem;
   }
 
+  nav .nav-inner {
+    padding: 0 20px;
+  }
+
   nav {
-    margin-top: 20px;
+    padding: 11px 0;
   }
 
   nav a {
     margin-right: 17px;
+    font-size: 0.88rem;
   }
 
   section {
@@ -496,14 +515,24 @@ footer {
     working in algebraic geometry, birational geometry, and related areas.
   </p>
 
-  <nav>
-    <a href="#upcoming">Upcoming Talks</a>
-    <a href="#past">Past Talks</a>
-  </nav>
-
 </div>
 
 </header>
+
+
+<nav>
+
+  <div class="nav-inner">
+
+    <a href="#about">About</a>
+
+    <a href="#upcoming">Upcoming Talks</a>
+
+    <a href="#past">Past Talks</a>
+
+  </div>
+
+</nav>
 
 
 
@@ -543,9 +572,6 @@ footer {
     </dd>
 
   </dl>
-
-
- 
 
 </section>
 
@@ -591,105 +617,69 @@ const talks = [
 
   {
     date: "2026-10-16",
-
     speaker: "Fei Hu",
-
     affiliation: "Nanjing University",
-
     title: "TBA",
-
     abstract: "",
-
     specialTime: "",
-
     specialLocation: ""
   },
 
 
   {
     date: "2026-10-21",
-
     speaker: "Sheng Rao",
-
     affiliation: "Wuhan University",
-
     title: "TBA",
-
     abstract: "",
-
     specialTime: "",
-
     specialLocation: ""
   },
 
 
   {
     date: "2026-09-04",
-
     speaker: "Minzhe Zhu",
-
-    affiliation:
-      "Korea Institute for Advanced Study (KIAS)",
-
-    title:
-      "Boundedness of polarized foliated surfaces",
-
-    abstract:
-      "We establish the minimal model program for klt adjoint foliated surfaces and use it to study the boundedness of polarized adjoint foliated surfaces. We prove that $\\epsilon$-lc adjoint foliated surfaces with nef adjoint canonical divisor and a nef and big integral polarization form a bounded family, provided that the volume of their sum is bounded from above. As applications, we establish boundedness and effective birationality for adjoint foliated surfaces of general type, as well as a uniform positive lower bound for their volumes. Finally, for $\\epsilon$-lc Calabi--Yau adjoint foliated surfaces, we prove that the volumes of the canonical divisors of rank one foliations on the underlying surfaces belong to a fixed discrete set. This is joint work with Yen-An Chen.",
-
+    affiliation: "Korea Institute for Advanced Study (KIAS)",
+    title: "Boundedness of polarized foliated surfaces",
+    abstract: "We establish the minimal model program for klt adjoint foliated surfaces and use it to study the boundedness of polarized adjoint foliated surfaces. We prove that $\\epsilon$-lc adjoint foliated surfaces with nef adjoint canonical divisor and a nef and big integral polarization form a bounded family, provided that the volume of their sum is bounded from above. As applications, we establish boundedness and effective birationality for adjoint foliated surfaces of general type, as well as a uniform positive lower bound for their volumes. Finally, for $\\epsilon$-lc Calabi--Yau adjoint foliated surfaces, we prove that the volumes of the canonical divisors of rank one foliations on the underlying surfaces belong to a fixed discrete set. This is joint work with Yen-An Chen.",
     specialTime: "",
-
     specialLocation: ""
   },
 
 
   {
     date: "2026-09-11",
-
     speaker: "Kewei Zhang",
-
     affiliation: "Beijing Normal University",
-
     title: "TBA",
-
     abstract: "",
-
     specialTime: "",
-
     specialLocation: ""
   },
 
 
   {
     date: "2026-09-18",
-
     speaker: "Fulin Xu",
-
     affiliation: "Tsinghua University",
-
     title: "TBA",
-
     abstract: "",
-
     specialTime: "",
-
     specialLocation: ""
   },
- {
-    date: "2026-11-6",
 
+
+  {
+    date: "2026-11-06",
     speaker: "Yaxiong Liu",
-
     affiliation: "Chongqing University of Technology",
-
     title: "TBA",
-
     abstract: "",
-
     specialTime: "",
-
     specialLocation: ""
   }
+
 ];
 
 
@@ -857,7 +847,12 @@ function createTalkCard(talk) {
     talk.specialLocation.trim() !== "";
 
 
+  const nonFriday =
+    !friday;
+
+
   if (
+    nonFriday ||
     specialTime ||
     specialLocation
   ) {
@@ -867,6 +862,22 @@ function createTalkCard(talk) {
 
     meta.className =
       "talk-meta";
+
+
+    if (nonFriday && !specialTime) {
+
+      const p =
+        document.createElement("div");
+
+      p.className =
+        "special-meta";
+
+      p.textContent =
+        "Special time: This talk is not on the regular Friday schedule.";
+
+      meta.appendChild(p);
+
+    }
 
 
     if (specialTime) {
@@ -1047,14 +1058,45 @@ function renderTalks() {
 
   }
 
+
+  if (
+    window.MathJax &&
+    typeof MathJax.typesetPromise === "function"
+  ) {
+
+    MathJax.typesetPromise([
+      upcomingContainer,
+      pastContainer
+    ]);
+
+  }
+
 }
 
 
+
 renderTalks();
+
+
+window.addEventListener(
+  "load",
+  function() {
+
+    if (
+      window.MathJax &&
+      typeof MathJax.typesetPromise === "function"
+    ) {
+
+      MathJax.typesetPromise();
+
+    }
+
+  }
+);
 
 </script>
 
 
 </body>
+
 </html>
-```
